@@ -1,0 +1,66 @@
+.btnSpecial {
+    outline: none;
+    border: none;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    font-size: small;
+    border-radius: 12px;
+    position: relative;
+    top: -3px;
+    box-shadow: 0 3px black;
+    text-emphasis-color: rgb(0, 0, 0);
+}
+
+.btnSpecial:hover {
+    box-shadow: 0 2px var(--grey);
+    top: -2px;
+}
+.btnSpecial:active {
+    box-shadow: 0 0px var(--grey);
+    top: 0;
+}
+.text-movie {
+    color: gold;
+}
+.text-movie-red{
+    color: rgb(126, 22, 22);
+}
+.movie-red-back {
+    background: rgb(126, 22, 22);
+}
+.has-gold-background {
+    background:gold;
+}
+.rounded { 
+    border-radius: 3px;
+}
+
+body {
+    background-image: url(../css/images/red1.jpg) ;
+    background-position: center;
+    min-height: 100%;
+    min-height: 1024px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+header {
+    font-family: sans-serif;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bg-music {
+    position: absolute;
+
+}
+
+.btn {
+    background-color: transparent
+    color: fff; 
+    
+}

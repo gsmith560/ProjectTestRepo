@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Movie Matcher</title>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <!-- Add background image? -->
+
+    <header class="hero">
+        <div class="hero-body is-uppercase container">
+            <p class="title has-text-centered has-text-weight-bold text-movie-red">
+                Movie Matchers
+            </p>
+            <p class="subtitle has-text-centered has-text-weight-bold text-movie-red">
+                Movies you were made to watch.
+            </p>
+            
+        </div>
+        <!-- Navigation tabs -->
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light is-spaced bg-primary"> 
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ">
+                <div class="block movie-red-back has-text-centered">
+                    <a class="nav-item nav-link active m-4 text-movie" href="#">Home <span class="sr-only">(current)</span></a>
+                
+                    <a class="nav-item nav-link m-4 text-movie" href="#">Your Favorites</a>
+                
+                    <a class="nav-item nav-link m-4 text-movie" href="#">Contact Us</a>
+
+                    <a class="nav-item nav-link m-4 text-movie" href="#">Recommended</a>
+                    <!-- Insert easter egg movie poster to link-->
+                </div>
+   
+              </div>
+            </div>
+          </nav>
+        </div>
+        
+
+    </header>
+
+    <!-- Main -->
+    <main class="columns" id="page-content">
+    <!-- Quiz on the left -->
+        <section class="column m-4">
+            <div class="columns is-mobile is-2.0 is-flex-direction-column">
+                <div class="column">
+                    <h1 class="title text-movie">What Kind of Person Are You?</h1>
+                </div>
+                <!-- value is the variable we will pass in from our javascript -->
+                <div class="column is-half">
+                     <progress class="progress is-medium is-danger" value="4" max="5"></progress>
+                </div>
+                <div class="column" id="questions-section">
+                    <h1 class="title is-4 text-movie" id="prompt">Click start to find out!</h1>
+                        <button class="button is-white is-large ml-6 btnSpecial text-movie" id="start-quiz">Start</button>
+                    
+                    <ul id="questions-list">
+                        <!-- Question buttons through javascript -->
+                    </ul>
+                </div>
+                <div class="column" id="result-btn">
+                    <!-- insert result button here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Results on the right -->
+        <section class="column m-3">
+            <div class="columns is-flex-direction-column">
+                <div class="column">
+                    <h1 class="title text-movie">Result of What You Should Watch:</h1>
+                </div>
+                <div class="column" id="what-to-watch">
+                    <!-- Your results -->
+                    <div id="results-text"></div>
+
+                    <!-- List of movies paired with drink -->
+                    <ul id="results">
+
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="bg-music">
+        <audio id="myMusic" src="../project-1/assets/css/images/music.mp3" loop=""></audio>
+        <button class="btn">
+            <i class="fa fa-play-circle-o"></i>
+            <i class="fa fa-pause-circle-o"></i>
+
+        </button>
+    </div>
+
+    <footer class="container">
+        <h2 class="text-movie has-text-centered">❤️ Made with love by Program Parsers.</h2>
+        <div class="text-movie has-text-centered has-text-weight-bold">
+            
+            &copy; 2022 Program Parsers, Inc.
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+        $(document) .ready(function(){
+            $".btn .fa-play-circle-o" .on('click', function(){
+                $(this) .hide();
+                $(".fa-pause-curcle-o") .fadeIn();
+                $(#myMusic) [0] .play();
+            });
+
+            $".btn .fa-pause-circle-o" .on('click', function(){
+                $(this) .hide();
+                $(".fa-pause-curcle-o") .fadeIn();
+                $(#myMusic) [0] .play();
+            });
+
+            
+        }
+
+    </script>
+ 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/apiPull.js"></script>
+  </body>
+</html>
